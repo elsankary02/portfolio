@@ -40,19 +40,19 @@ export default function About() {
               </p>
 
               <p>
-                Throughout my journey, I&apos;ve developed applications in different
-                domains, including social trading, marine services, e-commerce,
-                education, and news. Each project has strengthened my technical
-                skills and taught me how to convert business requirements into
-                intuitive user experiences.
+                Throughout my journey, I&apos;ve developed applications in
+                different domains, including social trading, marine services,
+                e-commerce, education, and news. Each project has strengthened
+                my technical skills and taught me how to convert business
+                requirements into intuitive user experiences.
               </p>
 
               <p>
-                Beyond development, I&apos;m passionate about software engineering
-                principles. I continuously improve my knowledge of architecture,
-                design patterns, and system design because I believe great
-                software is built through thoughtful engineering, not just
-                writing code.
+                Beyond development, I&apos;m passionate about software
+                engineering principles. I continuously improve my knowledge of
+                architecture, design patterns, and system design because I
+                believe great software is built through thoughtful engineering,
+                not just writing code.
               </p>
 
               <p>
@@ -87,10 +87,10 @@ export default function About() {
               </h3>
 
               <p className="mt-4 leading-7 text-foreground/70">
-                I&apos;m currently deepening my knowledge of Software Architecture,
-                System Design, Backend Development with Node.js, Docker, and
-                CI/CD while continuing to improve my Flutter expertise and build
-                production-ready applications.
+                I&apos;m currently deepening my knowledge of Software
+                Architecture, System Design, Backend Development with Node.js,
+                Docker, and CI/CD while continuing to improve my Flutter
+                expertise and build production-ready applications.
               </p>
             </div>
 
