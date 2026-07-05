@@ -12,19 +12,49 @@ export async function POST(request: Request) {
       );
     }
 
+    // Verify SMTP env variables are present to give a helpful error
+    const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
+    const smtpPort = Number(process.env.SMTP_PORT) || 587;
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+
+    if (!smtpUser || !smtpPass) {
+      console.error(
+        "Contact form error: SMTP_USER or SMTP_PASS not configured",
+      );
+      return NextResponse.json(
+        { error: "SMTP credentials are not configured on the server." },
+        { status: 500 },
+      );
+    }
+
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: false,
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort === 465, // true for 465, false for other ports
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: smtpUser,
+        pass: smtpPass,
       },
     });
 
+    // Verify SMTP connection/auth before sending to provide a clearer error
+    try {
+      await transporter.verify();
+    } catch (err) {
+      console.error("SMTP verify failed:", err);
+      return NextResponse.json(
+        {
+          error:
+            "SMTP connection or authentication failed. Check your SMTP credentials (for Gmail use an App Password) and network access.",
+        },
+        { status: 502 },
+      );
+    }
+
     await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_EMAIL || process.env.SMTP_USER,
+      from: `"Portfolio Contact" <${smtpUser}>`,
+      to: process.env.CONTACT_EMAIL || smtpUser,
       replyTo: email,
       subject: `Portfolio Contact: ${subject}`,
       html: `
