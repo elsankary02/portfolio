@@ -113,8 +113,8 @@ export default async function Image() {
               gap: 16,
             }}
           >
-            <span>Ahmed</span>
-            <span style={{ color: "#818cf8" }}>Elsankary</span>
+            <span>Mohamed</span>
+            <span style={{ color: "#818cf8" }}>Ibrahim</span>
           </div>
           <div
             style={{

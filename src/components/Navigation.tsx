@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -54,7 +54,7 @@ export default function Navigation() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
           ? "bg-background/80 backdrop-blur-xl border-b border-overlay/5"
-          : "bg-transparent"
+          : "bg-transparent",
       )}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Ahmed<span className="text-primary-400"> Ibrahim</span>
+            Mohamed<span className="text-primary-400"> Ibrahim</span>
           </motion.a>
 
           <div className="hidden md:flex items-center gap-1">
@@ -76,9 +76,9 @@ export default function Navigation() {
                 onClick={() => handleClick(item.href)}
                 className={cn(
                   "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300",
-                    activeSection === item.href.slice(1)
-                      ? "text-foreground bg-overlay/10"
-                      : "text-foreground/50 hover:text-foreground hover:bg-overlay/5"
+                  activeSection === item.href.slice(1)
+                    ? "text-foreground bg-overlay/10"
+                    : "text-foreground/50 hover:text-foreground hover:bg-overlay/5",
                 )}
               >
                 {item.label}

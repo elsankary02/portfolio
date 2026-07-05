@@ -57,7 +57,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight"
             >
-              Ahmed <span className="text-primary-400">Ibrahim</span>
+              Mohamed <span className="text-primary-400">Ibrahim</span>
             </motion.h1>
 
             <motion.p
@@ -73,8 +73,7 @@ export default function Hero() {
             >
               I build production-ready mobile applications with Flutter,
               combining clean architecture, exceptional user experience, and
-              scalable engineering practices. Currently expanding into native
-              iOS development with Swift.
+              scalable engineering practices.
             </motion.p>
 
             <motion.div
@@ -84,7 +83,7 @@ export default function Hero() {
               <Button
                 variant="primary"
                 size="lg"
-                href="/resume/Ahmed_Ibrahim.pdf"
+                href="/resume/Mohamed_Ibrahim.pdf"
                 download
                 icon={<Download size={18} />}
               >
@@ -93,7 +92,7 @@ export default function Hero() {
               <Button
                 variant="secondary"
                 size="lg"
-                href="/resume/Ahmed_Ibrahim.pdf"
+                href="/resume/Mohamed_Ibrahim.pdf"
                 target="_blank"
                 icon={<ExternalLink size={18} />}
               >
@@ -117,7 +116,7 @@ export default function Hero() {
               className="flex items-center gap-5 mt-10 pt-8 border-t border-overlay/5"
             >
               <a
-                href="https://www.linkedin.com/in/elsankary99/"
+                href="https://www.linkedin.com/in/mohamed-ibrahim-3734b2330/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/40 hover:text-primary-400 transition-colors duration-300"
@@ -126,7 +125,7 @@ export default function Hero() {
                 <Linkedin size={22} />
               </a>
               <a
-                href="https://github.com/elsankary99"
+                href="https://github.com/elsankary02"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/40 hover:text-primary-400 transition-colors duration-300"
@@ -135,7 +134,7 @@ export default function Hero() {
                 <Github size={22} />
               </a>
               <a
-                href="mailto:elsankary99@gmail.com"
+                href="mailto:elsankry02@gmail.com"
                 className="text-foreground/40 hover:text-primary-400 transition-colors duration-300"
                 aria-label="Email"
               >
