@@ -1,0 +1,57 @@
+"use client";
+
+import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+
+export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <footer className="relative border-t border-overlay/[0.06]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-6">
+            <a
+              href="https://github.com/elsankary99"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/30 hover:text-primary-400 transition-colors"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/elsankary99/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/30 hover:text-primary-400 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a
+              href="mailto:elsankary99@gmail.com"
+              className="text-foreground/30 hover:text-primary-400 transition-colors"
+              aria-label="Email"
+            >
+              <Mail size={20} />
+            </a>
+          </div>
+
+          <p className="text-sm text-foreground/30 text-center">
+            Designed &amp; Built by Mohamed Ibrahim
+          </p>
+
+          <button
+            onClick={scrollToTop}
+            className="p-2 rounded-xl text-foreground/30 hover:text-foreground hover:bg-overlay/5 transition-all"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp size={20} />
+          </button>
+        </div>
+      </div>
+    </footer>
+  );
+}
