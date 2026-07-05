@@ -8,8 +8,7 @@ import {
   AlertCircle,
   Check,
   Download,
-  Github,
-  Linkedin,
+  ExternalLink,
   Loader2,
   Mail,
   Phone,
@@ -112,7 +111,7 @@ export default function Contact() {
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
                 >
                   <span className="w-10 h-10 rounded-xl bg-overlay/[0.05] flex items-center justify-center group-hover:bg-primary-500/10 transition-colors">
-                    <Linkedin size={18} />
+                    <ExternalLink size={18} />
                   </span>
                   LinkedIn Profile
                 </a>
@@ -123,7 +122,7 @@ export default function Contact() {
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
                 >
                   <span className="w-10 h-10 rounded-xl bg-overlay/[0.05] flex items-center justify-center group-hover:bg-primary-500/10 transition-colors">
-                    <Github size={18} />
+                    <ExternalLink size={18} />
                   </span>
                   GitHub Profile
                 </a>
