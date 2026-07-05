@@ -135,6 +135,8 @@ export default function Hero() {
               </a>
               <a
                 href="mailto:elsankry02@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground/40 hover:text-primary-400 transition-colors duration-300"
                 aria-label="Email"
               >
@@ -150,9 +152,9 @@ export default function Hero() {
           >
             <div className="relative flex items-center justify-center">
               {/* Glow behind */}
-              <div className="absolute w-[130%] h-[130%] rounded-full bg-gradient-to-br from-primary-500/15 via-purple-500/15 to-blue-500/15 blur-3xl" />
+              <div className="absolute w-[130%] h-[130%] rounded-full bg-gradient-to-br from-primary-500/15 via-primary-500/15 to-primary-400/15 blur-3xl" />
               {/* Gradient ring */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-500 via-purple-600 to-blue-600 p-[3px] shadow-2xl shadow-primary-600/20">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 p-[3px] shadow-2xl shadow-primary-600/20">
                 {/* Image container */}
                 <div className="relative w-full h-full rounded-full overflow-hidden bg-background">
                   <Image

@@ -24,21 +24,21 @@ export default function FloatingGradient() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.08] blur-[120px] transition-transform duration-500 ease-out"
         style={{
           background:
-            "radial-gradient(circle at center, #4F46E5 0%, #7C3AED 30%, #2563EB 60%, transparent 100%)",
+            "radial-gradient(circle at center, rgba(59,130,246,0.35) 0%, rgba(6,182,212,0.26) 40%, rgba(59,130,246,0.18) 70%, transparent 100%)",
         }}
       />
       <div
         className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-[0.05] blur-[100px] animate-float"
         style={{
           background:
-            "radial-gradient(circle at center, #8B5CF6 0%, #6366F1 50%, transparent 100%)",
+            "radial-gradient(circle at center, rgba(96,165,250,0.24) 0%, rgba(59,130,246,0.16) 50%, transparent 100%)",
         }}
       />
       <div
         className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full opacity-[0.04] blur-[120px] animate-float-delayed"
         style={{
           background:
-            "radial-gradient(circle at center, #3B82F6 0%, #4F46E5 50%, transparent 100%)",
+            "radial-gradient(circle at center, rgba(37,99,235,0.3) 0%, rgba(59,130,246,0.2) 40%, transparent 100%)",
         }}
       />
     </div>

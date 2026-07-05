@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Badge from "@/components/ui/Badge";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { technologies } from "@/data/technologies";
+import { motion } from "framer-motion";
 
 export default function Technologies() {
   return (

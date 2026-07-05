@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { experiences } from "@/data/experience";
+import { motion } from "framer-motion";
 
 export default function Experience() {
   return (
@@ -11,7 +11,7 @@ export default function Experience() {
         <SectionHeading
           label="Experience"
           title="A track record of delivering impact."
-          description="Four years of building products that matter, at companies that value quality."
+          description="Building polished Flutter apps for clients, from idea to launch, with a strong focus on clean architecture, smooth UX, and reliable delivery."
         />
 
         <div className="relative max-w-4xl mx-auto">
@@ -33,17 +33,23 @@ export default function Experience() {
               <div className="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 top-1 w-3 h-3 rounded-full bg-primary-500 border-2 border-background z-10" />
 
               {/* Content */}
-              <div className={`flex-1 pl-8 md:pl-0 ${index % 2 === 0 ? "md:text-right md:pr-12" : "md:text-left md:pl-12"}`}>
+              <div
+                className={`flex-1 pl-8 md:pl-0 ${index % 2 === 0 ? "md:text-right md:pr-12" : "md:text-left md:pl-12"}`}
+              >
                 <div className="p-6 rounded-2xl bg-overlay/[0.03] border border-overlay/[0.06] hover:bg-overlay/[0.06] transition-all duration-500">
                   <span className="inline-block text-xs font-semibold tracking-wider uppercase text-primary-400 mb-2">
                     {exp.period}
                   </span>
-                  <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
+                  <h3 className="text-xl font-bold text-foreground">
+                    {exp.role}
+                  </h3>
                   <p className="text-sm text-foreground/60 mt-1">
                     {exp.company} &middot; {exp.location}
                   </p>
 
-                  <ul className={`mt-4 space-y-3 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
+                  <ul
+                    className={`mt-4 space-y-3 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}
+                  >
                     {exp.achievements.map((achievement, i) => (
                       <motion.li
                         key={i}

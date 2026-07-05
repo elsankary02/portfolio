@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: "All fields are required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -29,23 +29,23 @@ export async function POST(request: Request) {
       subject: `Portfolio Contact: ${subject}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #4f46e5;">New Contact Message</h2>
+          <h2 style="color: #3B82F6;">New Contact Message</h2>
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
-              <td style="padding: 8px; font-weight: 600; color: #475569;">Name</td>
+              <td style="padding: 8px; font-weight: 600; color: #52525B;">Name</td>
               <td style="padding: 8px;">${name}</td>
             </tr>
             <tr>
-              <td style="padding: 8px; font-weight: 600; color: #475569;">Email</td>
+              <td style="padding: 8px; font-weight: 600; color: #52525B;">Email</td>
               <td style="padding: 8px;">${email}</td>
             </tr>
             <tr>
-              <td style="padding: 8px; font-weight: 600; color: #475569;">Subject</td>
+              <td style="padding: 8px; font-weight: 600; color: #52525B;">Subject</td>
               <td style="padding: 8px;">${subject}</td>
             </tr>
           </table>
-          <div style="margin-top: 16px; padding: 16px; background: #f8fafc; border-radius: 8px;">
-            <p style="margin: 0; font-weight: 600; color: #475569;">Message:</p>
+          <div style="margin-top: 16px; padding: 16px; background: #FAFAFA; border-radius: 8px;">
+            <p style="margin: 0; font-weight: 600; color: #52525B;">Message:</p>
             <p style="margin-top: 8px; white-space: pre-wrap;">${message}</p>
           </div>
         </div>
@@ -57,7 +57,7 @@ export async function POST(request: Request) {
     console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "Failed to send message. Please try again later." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

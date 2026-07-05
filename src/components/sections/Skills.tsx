@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Badge from "@/components/ui/Badge";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { skillCategories } from "@/data/skills";
+import { motion } from "framer-motion";
 
 function getSkillLevelColor(level: number) {
   if (level >= 5) return "bg-primary-500";

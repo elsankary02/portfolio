@@ -1,20 +1,20 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import Badge from "@/components/ui/Badge";
+import SectionHeading from "@/components/ui/SectionHeading";
+import { projects } from "@/data/projects";
+import { AnimatePresence, motion } from "framer-motion";
 import {
-  ExternalLink,
-  Github,
   Apple,
-  Play,
   ChevronDown,
   ChevronUp,
+  ExternalLink,
+  Github,
+  Play,
   Store,
 } from "lucide-react";
-import SectionHeading from "@/components/ui/SectionHeading";
-import Badge from "@/components/ui/Badge";
-import { projects } from "@/data/projects";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function FeaturedProjects() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
@@ -42,23 +42,20 @@ export default function FeaturedProjects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               layout
             >
-              <div
-                className="rounded-2xl bg-overlay/[0.03] border border-overlay/[0.06] overflow-hidden transition-all duration-500 hover:bg-overlay/[0.05]"
-              >
+              <div className="rounded-2xl border border-overlay/[0.08] bg-overlay/[0.03] overflow-hidden transition-all duration-500 hover:bg-overlay/[0.05] hover:border-overlay/[0.12]">
                 {/* Preview */}
                 <div className="p-6 sm:p-8">
                   <div className="grid lg:grid-cols-5 gap-6 lg:gap-10">
                     {/* Project Image */}
                     <div className="lg:col-span-2">
-                      <div className="relative w-full aspect-video rounded-xl overflow-hidden">
-                        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} blur-2xl scale-110 opacity-60`} />
+                      <div className="relative w-full aspect-square rounded-[22px] overflow-hidden border border-overlay/[0.08]">
                         <div className="relative w-full h-full p-4">
                           <div className="relative w-full h-full">
                             <Image
                               src={project.image}
                               alt={project.title}
                               fill
-                              className="object-contain"
+                              className="object-cover"
                               sizes="(max-width: 1024px) 100vw, 40vw"
                             />
                           </div>
@@ -191,7 +188,9 @@ export default function FeaturedProjects() {
                                   key={i}
                                   className="text-sm text-foreground/60 flex gap-2"
                                 >
-                                  <span className="text-primary-400 shrink-0">&rsaquo;</span>
+                                  <span className="text-primary-400 shrink-0">
+                                    &rsaquo;
+                                  </span>
                                   {feature}
                                 </li>
                               ))}
@@ -209,7 +208,9 @@ export default function FeaturedProjects() {
                                   key={i}
                                   className="text-sm text-foreground/60 flex gap-2"
                                 >
-                                  <span className="text-red-400 shrink-0">&rsaquo;</span>
+                                  <span className="text-primary-400 shrink-0">
+                                    &rsaquo;
+                                  </span>
                                   {challenge}
                                 </li>
                               ))}
@@ -227,7 +228,9 @@ export default function FeaturedProjects() {
                                   key={i}
                                   className="text-sm text-foreground/60 flex gap-2"
                                 >
-                                  <span className="text-green-400 shrink-0">&rsaquo;</span>
+                                  <span className="text-secondary-400 shrink-0">
+                                    &rsaquo;
+                                  </span>
                                   {solution}
                                 </li>
                               ))}
@@ -259,7 +262,9 @@ export default function FeaturedProjects() {
                                   key={i}
                                   className="text-sm text-foreground/60 flex gap-2"
                                 >
-                                  <span className="text-primary-400 shrink-0">&#9679;</span>
+                                  <span className="text-primary-400 shrink-0">
+                                    &#9679;
+                                  </span>
                                   {result}
                                 </li>
                               ))}

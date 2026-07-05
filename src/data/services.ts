@@ -38,21 +38,9 @@ export const services: Service[] = [
     icon: "box",
   },
   {
-    title: "App Store Deployment",
-    description:
-      "Managing end-to-end deployment pipelines on both Apple App Store and Google Play Store including CI/CD automation.",
-    icon: "rocket",
-  },
-  {
     title: "Code Quality",
     description:
       "Enforcing coding standards, automated testing, code review practices, and static analysis for maintainable codebases.",
     icon: "shield",
-  },
-  {
-    title: "Testing",
-    description:
-      "Writing comprehensive test suites including unit, widget, and integration tests to ensure reliability and prevent regressions.",
-    icon: "check-square",
   },
 ];

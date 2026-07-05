@@ -21,9 +21,9 @@ export default async function Image() {
         display: "flex",
         flexDirection: "column",
         background:
-          "linear-gradient(135deg, #0a0a0f 0%, #12121f 50%, #0a0a0f 100%)",
+          "linear-gradient(135deg, #09090B 0%, #18181B 50%, #09090B 100%)",
         fontFamily: "system-ui, sans-serif",
-        color: "#f8fafc",
+        color: "#FAFAFA",
         position: "relative",
         overflow: "hidden",
       }}
@@ -38,7 +38,7 @@ export default async function Image() {
           height: 500,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(79,70,229,0.25) 0%, rgba(168,85,247,0.1) 50%, transparent 70%)",
+            "radial-gradient(circle, rgba(59,130,246,0.28) 0%, rgba(6,182,212,0.16) 50%, transparent 70%)",
         }}
       />
       <div
@@ -50,7 +50,7 @@ export default async function Image() {
           height: 400,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 60%)",
+            "radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 60%)",
         }}
       />
 
@@ -59,7 +59,7 @@ export default async function Image() {
         style={{
           width: "100%",
           height: 4,
-          background: "linear-gradient(90deg, #4f46e5, #a855f7, #6366f1)",
+          background: "linear-gradient(90deg, #3B82F6, #06B6D4, #2563EB)",
         }}
       />
 
@@ -80,11 +80,11 @@ export default async function Image() {
             width: 200,
             height: 200,
             borderRadius: "50%",
-            border: "4px solid rgba(79,70,229,0.5)",
+            border: "4px solid rgba(59,130,246,0.5)",
             overflow: "hidden",
             display: "flex",
             flexShrink: 0,
-            boxShadow: "0 0 60px rgba(79,70,229,0.3)",
+            boxShadow: "0 0 60px rgba(59,130,246,0.3)",
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -114,13 +114,13 @@ export default async function Image() {
             }}
           >
             <span>Mohamed</span>
-            <span style={{ color: "#818cf8" }}>Ibrahim</span>
+            <span style={{ color: "#60A5FA" }}>Ibrahim</span>
           </div>
           <div
             style={{
               fontSize: 24,
               fontWeight: 600,
-              color: "#a5b4fc",
+              color: "#60A5FA",
               letterSpacing: "0.02em",
             }}
           >
@@ -129,7 +129,7 @@ export default async function Image() {
           <div
             style={{
               fontSize: 18,
-              color: "rgba(248,250,252,0.6)",
+              color: "rgba(250,250,250,0.6)",
               marginTop: 4,
               maxWidth: 500,
               lineHeight: 1.4,
@@ -151,11 +151,11 @@ export default async function Image() {
               style={{
                 fontSize: 14,
                 fontWeight: 600,
-                color: "#4f46e5",
-                background: "rgba(79,70,229,0.15)",
+                color: "#3B82F6",
+                background: "rgba(59,130,246,0.15)",
                 padding: "6px 16px",
                 borderRadius: 20,
-                border: "1px solid rgba(79,70,229,0.3)",
+                border: "1px solid rgba(59,130,246,0.3)",
               }}
             >
               Flutter
@@ -164,11 +164,11 @@ export default async function Image() {
               style={{
                 fontSize: 14,
                 fontWeight: 600,
-                color: "#4f46e5",
-                background: "rgba(79,70,229,0.15)",
+                color: "#3B82F6",
+                background: "rgba(59,130,246,0.15)",
                 padding: "6px 16px",
                 borderRadius: 20,
-                border: "1px solid rgba(79,70,229,0.3)",
+                border: "1px solid rgba(59,130,246,0.3)",
               }}
             >
               Dart
@@ -177,11 +177,11 @@ export default async function Image() {
               style={{
                 fontSize: 14,
                 fontWeight: 600,
-                color: "#4f46e5",
-                background: "rgba(79,70,229,0.15)",
+                color: "#3B82F6",
+                background: "rgba(59,130,246,0.15)",
                 padding: "6px 16px",
                 borderRadius: 20,
-                border: "1px solid rgba(79,70,229,0.3)",
+                border: "1px solid rgba(59,130,246,0.3)",
               }}
             >
               Swift
@@ -197,14 +197,14 @@ export default async function Image() {
           alignItems: "center",
           justifyContent: "center",
           padding: "16px 80px",
-          borderTop: "1px solid rgba(255,255,255,0.06)",
+          borderTop: "1px solid rgba(250,250,250,0.08)",
         }}
       >
         <span
           style={{
             fontSize: 14,
             fontWeight: 400,
-            color: "rgba(248,250,252,0.35)",
+            color: "rgba(250,250,250,0.35)",
             letterSpacing: "0.1em",
           }}
         >

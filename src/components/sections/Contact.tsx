@@ -88,25 +88,25 @@ export default function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:elsankary99@gmail.com"
+                  href="mailto:elsankry02@gmail.com"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
                 >
                   <span className="w-10 h-10 rounded-xl bg-overlay/[0.05] flex items-center justify-center group-hover:bg-primary-500/10 transition-colors">
                     <Mail size={18} />
                   </span>
-                  elsankary99@gmail.com
+                  elsankry02@gmail.com
                 </a>
                 <a
-                  href="tel:+201285805818"
+                  href="tel:+20 12 04306044"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
                 >
                   <span className="w-10 h-10 rounded-xl bg-overlay/[0.05] flex items-center justify-center group-hover:bg-primary-500/10 transition-colors">
                     <Phone size={18} />
                   </span>
-                  +20 128 580 5818
+                  +20 12 04306044
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/elsankary99/"
+                  href="https://www.linkedin.com/in/mohamed-ibrahim-3734b2330/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
@@ -117,7 +117,7 @@ export default function Contact() {
                   LinkedIn Profile
                 </a>
                 <a
-                  href="https://github.com/elsankary99"
+                  href="https://github.com/elsankary02"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"

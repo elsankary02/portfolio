@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com/elsankary99"
+              href="https://github.com/elsankary02"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/30 hover:text-primary-400 transition-colors"
@@ -22,7 +22,7 @@ export default function Footer() {
               <Github size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/elsankary99/"
+              href="https://www.linkedin.com/in/mohamed-ibrahim-3734b2330/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/30 hover:text-primary-400 transition-colors"
@@ -31,7 +31,7 @@ export default function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:elsankary99@gmail.com"
+              href="mailto:elsankry02@gmail.com"
               className="text-foreground/30 hover:text-primary-400 transition-colors"
               aria-label="Email"
             >
