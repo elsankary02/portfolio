@@ -9,6 +9,7 @@ import {
   ChevronDown,
   ChevronUp,
   ExternalLink,
+  Github,
   Play,
   Store,
 } from "lucide-react";
@@ -130,7 +131,7 @@ export default function FeaturedProjects() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground/50 hover:text-foreground transition-colors"
                           >
-                            <ExternalLink size={14} />
+                            <Github size={14} />
                             GitHub
                           </a>
                         </div>
@@ -304,7 +305,7 @@ export default function FeaturedProjects() {
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
                             >
-                              <ExternalLink size={16} />
+                              <Github size={16} />
                               View Source
                               <ExternalLink size={14} />
                             </a>

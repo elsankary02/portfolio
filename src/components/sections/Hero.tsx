@@ -2,7 +2,14 @@
 
 import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, ExternalLink, Mail } from "lucide-react";
+import {
+  ArrowDown,
+  Download,
+  ExternalLink,
+  Github,
+  Linkedin,
+  Mail,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -115,7 +122,7 @@ export default function Hero() {
                 className="text-foreground/40 hover:text-primary-400 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
-                <ExternalLink size={22} />
+                <Linkedin size={22} />
               </a>
               <a
                 href="https://github.com/elsankary02"
@@ -124,7 +131,7 @@ export default function Hero() {
                 className="text-foreground/40 hover:text-primary-400 transition-colors duration-300"
                 aria-label="GitHub"
               >
-                <ExternalLink size={22} />
+                <Github size={22} />
               </a>
               <a
                 href="mailto:elsankry02@gmail.com"

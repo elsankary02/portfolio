@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, ExternalLink, Mail } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -19,7 +19,7 @@ export default function Footer() {
               className="text-foreground/30 hover:text-primary-400 transition-colors"
               aria-label="GitHub"
             >
-              <ExternalLink size={20} />
+              <Github size={20} />
             </a>
             <a
               href="https://www.linkedin.com/in/mohamed-ibrahim-3734b2330/"
@@ -28,7 +28,7 @@ export default function Footer() {
               className="text-foreground/30 hover:text-primary-400 transition-colors"
               aria-label="LinkedIn"
             >
-              <ExternalLink size={20} />
+              <Linkedin size={20} />
             </a>
             <a
               href="mailto:elsankry02@gmail.com"
