@@ -36,7 +36,7 @@ export default function Experience() {
               <div
                 className={`flex-1 pl-8 md:pl-0 ${index % 2 === 0 ? "md:text-right md:pr-12" : "md:text-left md:pl-12"}`}
               >
-                <div className="p-6 rounded-2xl bg-overlay/[0.03] border border-overlay/[0.06] hover:bg-overlay/[0.06] transition-all duration-500">
+                <div className="p-6 rounded-2xl bg-card border border-border/[0.12] hover:bg-card/95 transition-all duration-500">
                   <span className="inline-block text-xs font-semibold tracking-wider uppercase text-primary-400 mb-2">
                     {exp.period}
                   </span>

@@ -30,7 +30,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: catIndex * 0.08 }}
-              className="p-6 rounded-2xl bg-overlay/[0.03] border border-overlay/[0.06]"
+              className="p-6 rounded-2xl bg-card border border-border/[0.12]"
             >
               <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground/40 mb-4">
                 {category.title}

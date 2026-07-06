@@ -109,7 +109,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="rounded-2xl border border-overlay/10 bg-overlay/[0.03] p-8">
+            <div className="rounded-2xl border border-border/[0.12] bg-card p-8">
               <div className="grid grid-cols-2 gap-8">
                 <AnimatedCounter to={8} suffix="+" label="Projects" />
 
@@ -132,7 +132,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-overlay/10 bg-overlay/[0.03] p-8">
+            <div className="rounded-2xl border border-border/[0.12] bg-card p-8">
               <h3 className="text-lg font-semibold text-foreground">
                 What Drives Me
               </h3>

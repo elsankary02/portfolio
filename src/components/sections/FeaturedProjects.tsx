@@ -42,13 +42,13 @@ export default function FeaturedProjects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               layout
             >
-              <div className="rounded-2xl border border-overlay/[0.08] bg-overlay/[0.03] overflow-hidden transition-all duration-500 hover:bg-overlay/[0.05] hover:border-overlay/[0.12]">
+              <div className="rounded-2xl border border-border/[0.12] bg-card overflow-hidden transition-all duration-500 hover:bg-card/95 hover:border-border/[0.18]">
                 {/* Preview */}
                 <div className="p-6 sm:p-8">
                   <div className="grid lg:grid-cols-5 gap-6 lg:gap-10">
                     {/* Project Image */}
                     <div className="lg:col-span-2">
-                      <div className="relative w-full aspect-square rounded-[22px] overflow-hidden border border-overlay/[0.08]">
+                      <div className="relative w-full aspect-square rounded-[22px] overflow-hidden border border-border/[0.12]">
                         <div className="relative w-full h-full p-4">
                           <div className="relative w-full h-full">
                             <Image
