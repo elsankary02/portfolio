@@ -7,7 +7,7 @@ export const projects: Project[] = [
     subtitle: "Social Trading Platform",
     overview:
       "A social trading platform that connects traders and investors with live market updates, educational sessions, and interactive social features. The app is designed to keep users engaged with trading-related content and real-time app flows.",
-    role: "Flutter Developer — Built core app features, integrated APIs, and contributed to a polished user experience for trading and social engagement.",
+    role: "Flutter Developer — Designed and developed responsive and user-friendly UI screens, built core app features,  and contributed to integrated APIs",
     challenges: [
       "Delivering a smooth and engaging experience for a trading-focused audience",
       "Keeping real-time content and social features responsive",
@@ -16,6 +16,7 @@ export const projects: Project[] = [
     solutions: [
       "Implemented trading and social features with a clean and scalable Flutter architecture",
       "Integrated APIs and real-time app flows for market updates and user engagement",
+      "Focused on a responsive experience that supports content discovery and interaction",
       "Focused on a responsive experience that supports content discovery and interaction",
     ],
     keyFeatures: [
