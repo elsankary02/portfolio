@@ -48,7 +48,7 @@ export default function FeaturedProjects() {
                   <div className="grid lg:grid-cols-5 gap-6 lg:gap-10">
                     {/* Project Image */}
                     <div className="lg:col-span-2">
-                      <div className="relative w-full aspect-square rounded-[22px] overflow-hidden border border-border/[0.12]">
+                      <div className="relative w-full aspect-[3/2] rounded-[22px] overflow-hidden border border-border/[0.12]">
                         <div className="relative w-full h-full p-4">
                           <div className="relative w-full h-full">
                             <Image
@@ -97,6 +97,17 @@ export default function FeaturedProjects() {
                           >
                             <Play size={14} />
                             Google Play
+                          </a>
+                        )}
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-overlay/10 text-foreground hover:bg-overlay/20 transition-colors"
+                          >
+                            <Github size={14} />
+                            GitHub
                           </a>
                         )}
                       </div>
