@@ -47,7 +47,13 @@ export default function FeaturedProjects() {
                 <div className="p-6 sm:p-8">
                   <div className="grid lg:grid-cols-5 gap-6 lg:gap-10">
                     {/* Project Image */}
-                    <div className="lg:col-span-2">
+                    <div
+                      className={
+                        project.appStore || project.googlePlay
+                          ? "lg:col-span-3"
+                          : "lg:col-span-2"
+                      }
+                    >
                       <div className="relative w-full aspect-[3/2] rounded-[22px] overflow-hidden border border-border/[0.12]">
                         <div className="relative w-full h-full p-4">
                           <div className="relative w-full h-full">
@@ -64,7 +70,13 @@ export default function FeaturedProjects() {
                     </div>
 
                     {/* Info */}
-                    <div className="lg:col-span-3 flex flex-col justify-center">
+                    <div
+                      className={
+                        project.appStore || project.googlePlay
+                          ? "lg:col-span-2 flex flex-col justify-center"
+                          : "lg:col-span-3 flex flex-col justify-center"
+                      }
+                    >
                       <div className="flex flex-wrap gap-2 mb-3">
                         {project.appStore && (
                           <a
