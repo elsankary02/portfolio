@@ -18,38 +18,36 @@ import {
 import { FormEvent, useState } from "react";
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setForm((prev) => ({ ...prev, [e.target.id]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
 
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY"); // <-- Replace this with your key from web3forms.com
+
     try {
-      const res = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
       });
 
-      if (!res.ok) throw new Error();
+      const data = await response.json();
 
-      setStatus("success");
-      setForm({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setStatus("idle"), 5000);
+      if (data.success) {
+        setStatus("success");
+        e.currentTarget.reset();
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        throw new Error(data.message || "Failed to send");
+      }
     } catch {
       setStatus("error");
       setTimeout(() => setStatus("idle"), 5000);
@@ -162,9 +160,8 @@ export default function Contact() {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       required
-                      value={form.name}
-                      onChange={handleChange}
                       placeholder="Your name"
                       className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all"
                     />
@@ -179,9 +176,8 @@ export default function Contact() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       required
-                      value={form.email}
-                      onChange={handleChange}
                       placeholder="your@email.com"
                       className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all"
                     />
@@ -197,9 +193,8 @@ export default function Contact() {
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
                     required
-                    value={form.subject}
-                    onChange={handleChange}
                     placeholder="What's this about?"
                     className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all"
                   />
@@ -213,10 +208,9 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     required
                     rows={5}
-                    value={form.message}
-                    onChange={handleChange}
                     placeholder="Tell me about your project..."
                     className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all resize-none"
                   />
