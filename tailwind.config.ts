@@ -11,6 +11,8 @@ const config: Config = {
     extend: {
       colors: {
         background: "rgb(var(--background) / <alpha-value>)",
+        card: "rgb(var(--card) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
         foreground: "rgb(var(--foreground) / <alpha-value>)",
         overlay: "rgb(var(--overlay) / <alpha-value>)",
         primary: {

@@ -93,11 +93,10 @@ export default function FeaturedProjects() {
                               href={project.appStore}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+                              className="inline-flex items-center gap-1.5 rounded-lg border border-overlay/10 bg-overlay/10 px-3 py-1.5 text-xs font-semibold text-foreground/80 transition-colors hover:border-overlay/20 hover:bg-overlay/20 hover:text-foreground"
                             >
-                              <Apple size={16} />
-                              View on App Store
-                              <ExternalLink size={14} />
+                              <Apple size={14} />
+                              App Store
                             </a>
                           )}
                           {project.googlePlay && (
@@ -105,11 +104,10 @@ export default function FeaturedProjects() {
                               href={project.googlePlay}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+                              className="inline-flex items-center gap-1.5 rounded-lg border border-overlay/10 bg-overlay/10 px-3 py-1.5 text-xs font-semibold text-foreground/80 transition-colors hover:border-overlay/20 hover:bg-overlay/20 hover:text-foreground"
                             >
-                              <Play size={16} />
-                              View on Google Play
-                              <ExternalLink size={14} />
+                              <Play size={14} />
+                              Google Play
                             </a>
                           )}
                         </div>
@@ -292,11 +290,10 @@ export default function FeaturedProjects() {
                                 href={project.appStore}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+                                className="inline-flex items-center gap-1.5 rounded-lg border border-overlay/10 bg-overlay/10 px-3 py-1.5 text-xs font-semibold text-foreground/80 transition-colors hover:border-overlay/20 hover:bg-overlay/20 hover:text-foreground"
                               >
-                                <Apple size={16} />
-                                View on App Store
-                                <ExternalLink size={14} />
+                                <Apple size={14} />
+                                App Store
                               </a>
                             )}
                             {project.googlePlay && (
@@ -304,11 +301,10 @@ export default function FeaturedProjects() {
                                 href={project.googlePlay}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+                                className="inline-flex items-center gap-1.5 rounded-lg border border-overlay/10 bg-overlay/10 px-3 py-1.5 text-xs font-semibold text-foreground/80 transition-colors hover:border-overlay/20 hover:bg-overlay/20 hover:text-foreground"
                               >
-                                <Play size={16} />
-                                View on Google Play
-                                <ExternalLink size={14} />
+                                <Play size={14} />
+                                Google Play
                               </a>
                             )}
                             {project.github && (

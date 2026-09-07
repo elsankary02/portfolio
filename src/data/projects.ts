@@ -46,7 +46,7 @@ export const projects: Project[] = [
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.reyada.invesier",
     image: "/images/projects/invesier.jpg",
-    showcaseImage: "/images/projects/invesier.png",
+    showcaseImage: "/images/projects/invesier-showcase.png",
     showcaseScale: 1.08,
     gradient: "from-primary-600 via-primary-500 to-primary-700",
   },
@@ -86,7 +86,16 @@ export const projects: Project[] = [
       "Clean Architecture",
       "Google Maps",
     ],
-    technologies: ["Flutter", "Dart", "Bloc", "Firebase", "WebSockets", "Hive", "Clean Architecture", "Google Maps"],
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Bloc",
+      "Firebase",
+      "WebSockets",
+      "Hive",
+      "Clean Architecture",
+      "Google Maps",
+    ],
     results: [
       "Reduced fleet management overhead by 40%",
       "Improved maintenance compliance to 95%",
@@ -142,7 +151,8 @@ export const projects: Project[] = [
       "Supported booking, driver offers, and live trip tracking flows",
       "Improved trip confidence with visible safety and sharing actions",
     ],
-   googlePlay: "https://play.google.com/store/apps/details?id=com.ladydriver.eg&hl=ar",
+    googlePlay:
+      "https://play.google.com/store/apps/details?id=com.ladydriver.eg&hl=ar",
     image: "/images/projects/lady-driver-showcase.png",
     showcaseImage: "/images/projects/lady-driver-showcase.png",
     gradient: "from-secondary-500 via-primary-500 to-primary-700",
@@ -178,6 +188,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/elsankary02/bookly",
     image: "/images/projects/bookly.jpg",
+    showcaseImage: "/images/projects/bookly-showcase.jpg",
     gradient: "from-primary-500 via-primary-400 to-secondary-500",
   },
   {
@@ -218,6 +229,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/elsankary02/food_ninja",
     image: "/images/projects/food-ninja.jpg",
+    showcaseImage: "/images/projects/food-ninja-showcase.jpg",
     gradient: "from-primary-500 via-secondary-500 to-primary-600",
   },
 ];

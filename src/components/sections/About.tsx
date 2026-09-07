@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
 
         <div className="grid gap-16 lg:grid-cols-[1.3fr_0.7fr]">
           <motion.div
-            className="lg:col-span-3 space-y-6"
+            className="space-y-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
