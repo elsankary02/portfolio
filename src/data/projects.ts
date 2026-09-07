@@ -21,16 +21,11 @@ export const projects: Project[] = [
       "Local database synchronization with conflict resolution for offline capabilities",
     ],
     keyFeatures: [
-<<<<<<< HEAD
       "Real-time portfolio tracking with live market data",
-=======
-    "Real-time portfolio tracking with live market data",
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
       "Advanced charting with technical analysis indicators",
       "Biometric authentication and secure transactions",
       "Push notifications for price alerts and portfolio updates",
       "Offline mode with automatic sync on reconnection",
-<<<<<<< HEAD
     ],
     technologies: [
       "Flutter",
@@ -41,10 +36,6 @@ export const projects: Project[] = [
       "Hive",
       "Clean Architecture",
     ],
-=======
-    ],
-    technologies: ["Flutter", "Dart", "Riverpod", "Firebase", "WebSockets", "Hive", "Clean Architecture"],
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
     results: [
       "Achieved sub-100ms latency for real-time data updates",
       "99.9% crash-free session rate in production",
@@ -67,11 +58,7 @@ export const projects: Project[] = [
       "A marine service app that lets boat owners manage boats, request maintenance services, schedule repairs, and track service progress.",
     role: "Junior Flutter Developer — Built UI screens in Flutter for a marine service app supporting boat management and maintenance requests.",
     challenges: [
-<<<<<<< HEAD
       "Extremely limited internet connectivity at sea requiring robust offline support",
-=======
-        "Extremely limited internet connectivity at sea requiring robust offline support",
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
       "Complex fleet management with multiple vessel types and crew roles",
       "Real-time vessel tracking with satellite data integration",
       "Multi-language support for international crew",
@@ -88,7 +75,6 @@ export const projects: Project[] = [
       "Maintenance scheduling with automated reminders",
       "Document management for maritime compliance",
       "Offline operation with automatic cloud sync",
-<<<<<<< HEAD
     ],
     technologies: [
       "Flutter",
@@ -99,8 +85,6 @@ export const projects: Project[] = [
       "Hive",
       "Clean Architecture",
       "Google Maps",
-=======
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
     ],
     technologies: ["Flutter", "Dart", "Bloc", "Firebase", "WebSockets", "Hive", "Clean Architecture", "Google Maps"],
     results: [
@@ -109,14 +93,9 @@ export const projects: Project[] = [
       "Successfully deployed across 50+ vessels",
       "4.8 star rating — highest in the company portfolio",
     ],
-<<<<<<< HEAD
     appStore: "https://apps.apple.com/us/app/al-rubban-marine/id6760139511",
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.reyada.alrubbanmarine&hl=ar",
-=======
-     appStore: "https://apps.apple.com/us/app/al-rubban-marine/id6760139511",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.reyada.alrubbanmarine&hl=ar",
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
     image: "/images/projects/alrubbanmarine.jpg",
     showcaseImage: "/images/projects/alrubbanmarine-showcase.png",
     showcaseScale: 1.08,
@@ -130,36 +109,23 @@ export const projects: Project[] = [
       "A women-only ride-sharing app connecting passengers and drivers through a smooth, accessible, and safety-focused mobile experience.",
     role: "Junior Flutter Developer — Built UI screens for booking, driver offers, pickup and drop-off maps, live trip tracking, and safety actions.",
     challenges: [
-<<<<<<< HEAD
       "Designing a ride-sharing experience that clearly supports both passenger and driver journeys",
-=======
-     "Designing a ride-sharing experience that clearly supports both passenger and driver journeys",
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
       "Building secure trip booking, driver selection, and ride confirmation flows",
       "Handling real-time ride tracking with route visibility and trip status updates",
       "Keeping safety actions accessible throughout the trip without cluttering the interface",
     ],
     solutions: [
-<<<<<<< HEAD
       "Implemented passenger and driver onboarding paths with clear role selection",
-=======
-     "Implemented passenger and driver onboarding paths with clear role selection",
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
       "Built map-based pickup and drop-off flows with fare and ride option selection",
       "Created driver offer cards with rating, ETA, fare, and confirmation actions",
       "Added live trip tracking with driver details, SOS, share trip, and call actions",
     ],
     keyFeatures: [
-<<<<<<< HEAD
       "Women-only ride booking and driver matching",
-=======
-       "Women-only ride booking and driver matching",
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
       "Pickup and drop-off selection with map routing",
       "Driver offers with fare, ETA, and rating details",
       "Live trip tracking and safety actions",
       "Passenger and driver mode selection",
-<<<<<<< HEAD
     ],
     technologies: [
       "Flutter",
@@ -170,10 +136,6 @@ export const projects: Project[] = [
       "REST API",
       "Clean Architecture",
     ],
-=======
-    ],
-    technologies: ["Flutter", "Dart", "Bloc", "Firebase", "Google Maps", "REST API", "Clean Architecture"],
->>>>>>> 1076294e81789e024649b94d1513ac2817be3a8e
     results: [
       "Published on Google Play",
       "Delivered a focused ride-sharing experience for women",
