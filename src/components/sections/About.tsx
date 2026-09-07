@@ -63,7 +63,7 @@ export default function About() {
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <a
-                  href="https://www.linkedin.com/in/mohamed-ibrahim-3734b2330/"
+                  href="https://www.linkedin.com/in/elsankary02/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Visit LinkedIn profile"
