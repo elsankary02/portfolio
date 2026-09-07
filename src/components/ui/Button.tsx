@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { forwardRef } from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline" | "ghost";
@@ -15,31 +15,17 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      className,
-      variant = "primary",
-      size = "md",
-      children,
-      href,
-      download,
-      target,
-      rel,
-      icon,
-      ...props
-    },
-    ref,
-  ) => {
+  ({ className, variant = "primary", size = "md", children, href, download, target, rel, icon, ...props }, ref) => {
     const baseStyles =
       "inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-background";
 
     const variants = {
       primary:
-        "bg-primary-500 text-white hover:bg-primary-400 focus:ring-2 focus:ring-primary-500/30 active:scale-[0.98] shadow-[0_10px_30px_rgba(59,130,246,0.08)] hover:shadow-[0_14px_40px_rgba(59,130,246,0.12)]",
+        "bg-gradient-to-r from-primary-600 to-purple-600 text-white hover:from-primary-500 hover:to-purple-500 shadow-lg shadow-primary-600/20 hover:shadow-primary-600/30 active:scale-[0.98]",
       secondary:
-        "bg-transparent text-primary-500 border border-primary-500/30 hover:bg-primary-500/5 active:scale-[0.98]",
+        "bg-overlay/10 text-foreground hover:bg-overlay/20 backdrop-blur-sm border border-overlay/10 hover:border-overlay/20 active:scale-[0.98]",
       outline:
-        "border border-border/[0.12] text-foreground hover:bg-overlay/5 hover:border-border/[0.16] active:scale-[0.98]",
+        "border border-overlay/20 text-foreground hover:bg-overlay/5 hover:border-overlay/40 active:scale-[0.98]",
       ghost:
         "text-foreground/70 hover:text-foreground hover:bg-overlay/5 active:scale-[0.98]",
     };
@@ -63,9 +49,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           href={href}
           download={download}
           target={target || (href.startsWith("http") ? "_blank" : undefined)}
-          rel={
-            rel || (href.startsWith("http") ? "noopener noreferrer" : undefined)
-          }
+          rel={rel || (href.startsWith("http") ? "noopener noreferrer" : undefined)}
           className={cn(baseStyles, variants[variant], sizes[size], className)}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
@@ -86,7 +70,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {content}
       </motion.button>
     );
-  },
+  }
 );
 
 Button.displayName = "Button";
