@@ -148,18 +148,30 @@ export default function FeaturedProjects() {
                           )}
                         </div>
 
+                        {project.googlePlay && (
+                          <a
+                            href={project.googlePlay}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 self-start mt-5 rounded-lg bg-overlay/10 px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-overlay/20 hover:text-foreground"
+                          >
+                            <Play size={15} />
+                            View on Google Play
+                            <ExternalLink size={14} />
+                          </a>
+                        )}
+
                         {project.github && (
-                          <div className="flex items-center gap-3 mt-5">
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground/50 hover:text-foreground transition-colors"
-                            >
-                              <Github size={14} />
-                              GitHub
-                            </a>
-                          </div>
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 self-start mt-5 rounded-lg bg-overlay/10 px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-overlay/20 hover:text-foreground"
+                          >
+                            <Github size={15} />
+                            View on GitHub
+                            <ExternalLink size={14} />
+                          </a>
                         )}
 
                         <button
