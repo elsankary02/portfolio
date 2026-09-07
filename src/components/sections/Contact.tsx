@@ -131,7 +131,7 @@ export default function Contact() {
 
               <Button
                 variant="secondary"
-                href="/resume/Mohamed_Ibrahim.pdf"
+                href="/resume/Mohamed%20Ibrahim%20-%20Resume.pdf"
                 download
                 icon={<Download size={16} />}
               >

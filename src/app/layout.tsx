@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Mohamed Ibrahim - Junior Flutter Developer",
   },
   description:
-    "Junior Flutter Developer with 4+ years of experience building production mobile applications for Android and iOS. Specializing in Flutter, Dart, Clean Architecture, and scalable software.",
+    "Junior Flutter Developer with hands-on experience building and publishing Flutter applications for Android and iOS. Skilled in Flutter, Dart, Firebase, REST API integration, and Riverpod and Bloc.",
   keywords: [
     "Flutter Developer",
     "Junior Flutter Developer",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: "Mohamed Ibrahim | Junior Flutter Developer",
     description:
-      "Building scalable Flutter apps for Android & iOS with clean architecture and exceptional user experiences.",
+      "Junior Flutter Developer building and publishing Flutter applications for Android and iOS with Flutter, Dart, Firebase, REST APIs, Riverpod, and Bloc.",
     images: [
       {
         url: "/opengraph-image.png",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     creator: "@elsankary99",
     title: "Mohamed Ibrahim | Junior Flutter Developer",
     description:
-      "Building scalable Flutter apps for Android & iOS with clean architecture and exceptional user experiences.",
+      "Junior Flutter Developer building and publishing Flutter applications for Android and iOS with Flutter, Dart, Firebase, REST APIs, Riverpod, and Bloc.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

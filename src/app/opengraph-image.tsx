@@ -135,8 +135,8 @@ export default async function Image() {
               lineHeight: 1.4,
             }}
           >
-            Building scalable production apps for Android & iOS with Clean
-            Architecture
+            Building and publishing Flutter apps for Android and iOS with
+            Firebase, REST APIs, Riverpod, and Bloc
           </div>
 
           {/* Tags */}

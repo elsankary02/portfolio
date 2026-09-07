@@ -11,7 +11,7 @@ export default function About() {
         <SectionHeading
           label="About"
           title="Building meaningful mobile experiences."
-          description="Flutter Developer passionate about building scalable applications, solving real-world problems, and continuously growing as a software engineer."
+          description="Junior Flutter Developer building and publishing Flutter applications for Android and iOS, with a focus on clean, maintainable code and modern mobile development practices."
         />
 
         <div className="grid gap-16 lg:grid-cols-[1.3fr_0.7fr]">

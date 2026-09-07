@@ -6,8 +6,8 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Flutter", level: 5 },
       { name: "Dart", level: 5 },
-      { name: "Android Development (Basic)", level: 3 },
-      { name: "iOS Development (Basic)", level: 3 },
+      { name: "Android Development", level: 3 },
+      { name: "iOS Development", level: 3 },
       { name: "Responsive UI", level: 5 },
       { name: "Material Design", level: 5 },
       { name: "Cupertino Widgets", level: 4 },
@@ -19,10 +19,10 @@ export const skillCategories: SkillCategory[] = [
       { name: "Riverpod", level: 5 },
       { name: "Bloc", level: 5 },
       { name: "Provider", level: 4 },
-      { name: "Clean Architecture (Basic)", level: 3 },
-      { name: "MVVM (Basic)", level: 3 },
-      { name: "Modular Structure (Basic)", level: 3 },
-      { name: "SOLID Principles (Basic understanding)", level: 3 },
+      { name: "Clean Architecture", level: 3 },
+      { name: "MVVM", level: 3 },
+      { name: "Modular Structure", level: 3 },
+      { name: "SOLID Principles", level: 3 },
     ],
   },
   {
@@ -46,16 +46,15 @@ export const skillCategories: SkillCategory[] = [
       { name: "VS Code", level: 5 },
       { name: "Postman", level: 4 },
       { name: "Firebase Console", level: 4 },
-      { name: "Codemagic (Basic)", level: 3 },
-      { name: "CI/CD (Basic understanding)", level: 3 },
+      { name: "Codemagic", level: 3 },
     ],
   },
   {
     title: "Local Storage",
     skills: [
       { name: "SharedPreferences", level: 4 },
-      { name: "Hive (Basic)", level: 3 },
-      { name: "SQLite (Basic)", level: 3 },
+      { name: "Hive", level: 3 },
+      { name: "SQLite", level: 3 },
     ],
   },
   {
@@ -75,6 +74,14 @@ export const skillCategories: SkillCategory[] = [
       { name: "Time Management", level: 5 },
       { name: "Requirement Understanding", level: 5 },
       { name: "Client Communication", level: 5 },
+    ],
+  },
+  {
+    title: "UI Development with Flutter Widgets",
+    skills: [
+      { name: "Responsive and Clean User Interfaces", level: 5 },
+      { name: "Material Design Widgets", level: 5 },
+      { name: "Cupertino Widgets", level: 4 },
     ],
   },
 ];

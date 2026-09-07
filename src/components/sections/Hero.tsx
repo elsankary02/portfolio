@@ -71,9 +71,10 @@ export default function Hero() {
               variants={itemVariants}
               className="mt-4 text-base text-foreground/50 leading-relaxed max-w-xl"
             >
-              I build production-ready mobile applications with Flutter,
-              combining clean architecture, exceptional user experience, and
-              scalable engineering practices.
+              I am a Junior Flutter Developer with hands-on experience building
+              and publishing Flutter applications for Android and iOS. Skilled
+              in Flutter, Dart, Firebase, REST API integration, and state
+              management using Riverpod and Bloc.
             </motion.p>
 
             <motion.div
@@ -83,7 +84,7 @@ export default function Hero() {
               <Button
                 variant="primary"
                 size="lg"
-                href="/resume/Mohamed_Ibrahim.pdf"
+                href="/resume/Mohamed%20Ibrahim%20-%20Resume.pdf"
                 download
                 icon={<Download size={18} />}
               >
@@ -92,7 +93,7 @@ export default function Hero() {
               <Button
                 variant="secondary"
                 size="lg"
-                href="/resume/Mohamed_Ibrahim.pdf"
+                href="/resume/Mohamed%20Ibrahim%20-%20Resume.pdf"
                 target="_blank"
                 icon={<ExternalLink size={18} />}
               >
