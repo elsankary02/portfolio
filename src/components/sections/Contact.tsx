@@ -1,36 +1,17 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-import SectionHeading from "@/components/ui/SectionHeading";
-import { cn } from "@/lib/utils";
+import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
-import {
-  AlertCircle,
-  Check,
-  Download,
-  Github,
-  Linkedin,
-  Loader2,
-  Mail,
-  Phone,
-  Send,
-} from "lucide-react";
-import { FormEvent, useState } from "react";
+import { Mail, Github, Linkedin, Download, Send, Check, Phone, Loader2, AlertCircle } from "lucide-react";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Button from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
@@ -61,8 +42,8 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Contact"
-          title="Let's work together."
-          description="Have a project in mind? Let's talk about how I can help."
+          title="Let&apos;s work together."
+          description="Have a project in mind? Let&apos;s talk about how I can help."
         />
 
         <div className="max-w-5xl mx-auto">
@@ -80,15 +61,15 @@ export default function Contact() {
                   Get in touch
                 </h3>
                 <p className="text-sm text-foreground/50 leading-relaxed">
-                  I&apos;m always open to discussing new projects, creative
-                  ideas, or opportunities to push the boundaries of what&apos;s
-                  possible with mobile technology.
+                  I&apos;m always open to discussing new projects, creative ideas,
+                  or opportunities to push the boundaries of what&apos;s possible
+                  with mobile technology.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <a
-                  href="mailto:mohamedibrahimsoftware02@gmail.com"
+                  href="mailto:ahmedibrahim.software@gmail.com"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
                 >
                   <span className="w-10 h-10 rounded-xl bg-overlay/[0.05] flex items-center justify-center group-hover:bg-primary-500/10 transition-colors">
@@ -97,7 +78,7 @@ export default function Contact() {
                   mohamedibrahimsoftware02@gmail.com
                 </a>
                 <a
-                  href="tel:+20 12 04306044"
+                  href="tel:+201204306044"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
                 >
                   <span className="w-10 h-10 rounded-xl bg-overlay/[0.05] flex items-center justify-center group-hover:bg-primary-500/10 transition-colors">
@@ -131,7 +112,7 @@ export default function Contact() {
 
               <Button
                 variant="secondary"
-                href="/resume/Mohamed%20Ibrahim%20-%20Resume.pdf"
+                href="/resume/Mohamed Ibrahim - Resume.pdf""
                 download
                 icon={<Download size={16} />}
               >
@@ -190,35 +171,35 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-foreground/60 mb-2"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    required
-                    value={form.subject}
-                    onChange={handleChange}
-                    placeholder="What's this about?"
-                    className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all"
+                      className="block text-sm font-medium text-foreground/60 mb-2"
+                    >
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      required
+                      value={form.subject}
+                      onChange={handleChange}
+                      placeholder="What's this about?"
+                      className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-foreground/60 mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    required
-                    rows={5}
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Tell me about your project..."
-                    className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all resize-none"
+                      className="block text-sm font-medium text-foreground/60 mb-2"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      required
+                      rows={5}
+                      value={form.message}
+                      onChange={handleChange}
+                      placeholder="Tell me about your project..."
+                      className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all resize-none"
                   />
                 </div>
                 <Button
@@ -226,7 +207,7 @@ export default function Contact() {
                   variant="primary"
                   className={cn(
                     "w-full",
-                    status === "loading" && "opacity-70 pointer-events-none",
+                    status === "loading" && "opacity-70 pointer-events-none"
                   )}
                   icon={
                     status === "loading" ? (
@@ -243,10 +224,10 @@ export default function Contact() {
                   {status === "loading"
                     ? "Sending..."
                     : status === "success"
-                      ? "Message Sent!"
-                      : status === "error"
-                        ? "Failed to Send"
-                        : "Send Message"}
+                    ? "Message Sent!"
+                    : status === "error"
+                    ? "Failed to Send"
+                    : "Send Message"}
                 </Button>
               </form>
             </motion.div>
