@@ -86,16 +86,6 @@ export const projects: Project[] = [
       "Clean Architecture",
       "Google Maps",
     ],
-    technologies: [
-      "Flutter",
-      "Dart",
-      "Bloc",
-      "Firebase",
-      "WebSockets",
-      "Hive",
-      "Clean Architecture",
-      "Google Maps",
-    ],
     results: [
       "Reduced fleet management overhead by 40%",
       "Improved maintenance compliance to 95%",

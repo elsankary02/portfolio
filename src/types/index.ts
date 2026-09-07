@@ -14,6 +14,8 @@ export interface Project {
   googlePlay?: string;
   github?: string;
   image: string;
+  showcaseImage?: string;
+  showcaseScale?: number;
   gradient: string;
 }
 
