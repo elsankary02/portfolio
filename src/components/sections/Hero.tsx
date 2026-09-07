@@ -1,16 +1,9 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-import { motion } from "framer-motion";
-import {
-  ArrowDown,
-  Download,
-  ExternalLink,
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowDown, Download, ExternalLink, Mail, Github, Linkedin } from "lucide-react";
+import Button from "@/components/ui/Button";
 
 export default function Hero() {
   const containerVariants = {
@@ -32,6 +25,7 @@ export default function Hero() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
+
 
   return (
     <section
@@ -71,9 +65,10 @@ export default function Hero() {
               variants={itemVariants}
               className="mt-4 text-base text-foreground/50 leading-relaxed max-w-xl"
             >
-              I building and publishing Flutter applications for Android and
-              iOS. Skilled in Flutter, Dart, Firebase, REST API integration, and
-              state management using Riverpod and Bloc.
+              I am a Junior Flutter Developer with hands-on experience building
+              and publishing Flutter applications for Android and iOS. Skilled
+              in Flutter, Dart, Firebase, REST API integration, and state
+              management using Riverpod and Bloc.
             </motion.p>
 
             <motion.div
@@ -106,7 +101,11 @@ export default function Hero() {
               >
                 View Projects
               </Button>
-              <Button variant="ghost" size="lg" href="#contact">
+              <Button
+                variant="ghost"
+                size="lg"
+                href="#contact"
+              >
                 Contact Me
               </Button>
             </motion.div>

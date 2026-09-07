@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { forwardRef } from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline" | "ghost";
@@ -15,21 +15,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      className,
-      variant = "primary",
-      size = "md",
-      children,
-      href,
-      download,
-      target,
-      rel,
-      icon,
-      ...props
-    },
-    ref,
-  ) => {
+  ({ className, variant = "primary", size = "md", children, href, download, target, rel, icon, ...props }, ref) => {
     const baseStyles =
       "inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-background";
 
@@ -63,9 +49,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           href={href}
           download={download}
           target={target || (href.startsWith("http") ? "_blank" : undefined)}
-          rel={
-            rel || (href.startsWith("http") ? "noopener noreferrer" : undefined)
-          }
+          rel={rel || (href.startsWith("http") ? "noopener noreferrer" : undefined)}
           className={cn(baseStyles, variants[variant], sizes[size], className)}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
@@ -86,7 +70,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {content}
       </motion.button>
     );
-  },
+  }
 );
 
 Button.displayName = "Button";
