@@ -106,7 +106,7 @@ export default function Contact() {
                   +20 12 04306044
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mohamed-ibrahim-3734b2330/"
+                  href="https://www.linkedin.com/in/elsankary02/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
