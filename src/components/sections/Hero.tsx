@@ -29,7 +29,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -71,10 +71,9 @@ export default function Hero() {
               variants={itemVariants}
               className="mt-4 text-base text-foreground/50 leading-relaxed max-w-xl"
             >
-              I am a Junior Flutter Developer with hands-on experience building
-              and publishing Flutter applications for Android and iOS. Skilled
-              in Flutter, Dart, Firebase, REST API integration, and state
-              management using Riverpod and Bloc.
+              I building and publishing Flutter applications for Android and
+              iOS. Skilled in Flutter, Dart, Firebase, REST API integration, and
+              state management using Riverpod and Bloc.
             </motion.p>
 
             <motion.div
@@ -117,7 +116,7 @@ export default function Hero() {
               className="flex items-center gap-5 mt-10 pt-8 border-t border-overlay/5"
             >
               <a
-                href="https://www.linkedin.com/in/mohamed-ibrahim-3734b2330/"
+                href="https://www.linkedin.com/in/elsankary02/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/40 hover:text-primary-400 transition-colors duration-300"
@@ -135,7 +134,7 @@ export default function Hero() {
                 <Github size={22} />
               </a>
               <a
-                href="mailto:elsankry02@gmail.com"
+                href="mailto:mohamedibrahimsoftware02@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/40 hover:text-primary-400 transition-colors duration-300"

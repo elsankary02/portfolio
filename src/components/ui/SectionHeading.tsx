@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface SectionHeadingProps {
   label: string;
@@ -23,7 +23,7 @@ export default function SectionHeading({
       className={cn(
         "max-w-3xl mb-16",
         align === "center" ? "mx-auto text-center" : "text-left",
-        className
+        className,
       )}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}

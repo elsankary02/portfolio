@@ -34,8 +34,9 @@ export default function FeaturedProjects() {
 
         <div className="space-y-8">
           {projects.map((project, index) => {
-            const hasWideImage =
-              project.id === "invesier" || project.id === "lady-driver";
+            const mediaSource = project.showcaseImage ?? project.image;
+            const hasShowcase = Boolean(project.showcaseImage);
+            const imageScale = project.showcaseScale ?? 1;
 
             return (
               <motion.div
@@ -46,25 +47,39 @@ export default function FeaturedProjects() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 layout
               >
-                <div className="rounded-2xl border border-border/[0.12] bg-card overflow-hidden transition-all duration-500 hover:bg-card/95 hover:border-border/[0.18]">
+                <div className="rounded-2xl bg-overlay/[0.03] border border-overlay/[0.06] overflow-hidden transition-all duration-500 hover:bg-overlay/[0.05]">
                   {/* Preview */}
                   <div className="p-6 sm:p-8">
                     <div className="grid lg:grid-cols-5 gap-6 lg:gap-10">
                       {/* Project Image */}
-                      <div
-                        className={
-                          hasWideImage ? "lg:col-span-3" : "lg:col-span-2"
-                        }
-                      >
-                        <div className="relative w-full aspect-[3/2] rounded-[22px] overflow-hidden border border-border/[0.12]">
-                          <div className="relative w-full h-full p-4">
+                      <div className="lg:col-span-3">
+                        <div
+                          className={`relative w-full overflow-hidden rounded-xl border border-overlay/[0.08] bg-background/70 ${
+                            hasShowcase ? "aspect-[16/10]" : "aspect-video"
+                          }`}
+                        >
+                          <div
+                            className={`absolute inset-0 bg-gradient-to-br ${project.gradient} blur-2xl scale-110 opacity-50`}
+                          />
+                          <div
+                            className={`relative w-full h-full ${hasShowcase ? "" : "p-4"}`}
+                          >
                             <div className="relative w-full h-full">
                               <Image
-                                src={project.image}
+                                src={mediaSource}
                                 alt={project.title}
                                 fill
-                                className="object-cover"
-                                sizes="(max-width: 1024px) 100vw, 40vw"
+                                className={
+                                  hasShowcase
+                                    ? "object-cover"
+                                    : "object-contain"
+                                }
+                                sizes="(max-width: 1024px) 100vw, 60vw"
+                                style={
+                                  hasShowcase
+                                    ? { transform: `scale(${imageScale})` }
+                                    : undefined
+                                }
                               />
                             </div>
                           </div>
@@ -72,13 +87,7 @@ export default function FeaturedProjects() {
                       </div>
 
                       {/* Info */}
-                      <div
-                        className={
-                          hasWideImage
-                            ? "lg:col-span-2 flex flex-col justify-center"
-                            : "lg:col-span-3 flex flex-col justify-center"
-                        }
-                      >
+                      <div className="lg:col-span-2 flex flex-col justify-center">
                         <div className="flex flex-wrap gap-2 mb-3">
                           {project.appStore && (
                             <a
@@ -113,17 +122,6 @@ export default function FeaturedProjects() {
                               Google Play
                             </a>
                           )}
-                          {project.github && (
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-overlay/10 text-foreground hover:bg-overlay/20 transition-colors"
-                            >
-                              <Github size={14} />
-                              GitHub
-                            </a>
-                          )}
                         </div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
                           {project.title}
@@ -148,30 +146,18 @@ export default function FeaturedProjects() {
                           )}
                         </div>
 
-                        {project.googlePlay && (
-                          <a
-                            href={project.googlePlay}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 self-start mt-5 rounded-lg bg-overlay/10 px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-overlay/20 hover:text-foreground"
-                          >
-                            <Play size={15} />
-                            View on Google Play
-                            <ExternalLink size={14} />
-                          </a>
-                        )}
-
                         {project.github && (
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 self-start mt-5 rounded-lg bg-overlay/10 px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-overlay/20 hover:text-foreground"
-                          >
-                            <Github size={15} />
-                            View on GitHub
-                            <ExternalLink size={14} />
-                          </a>
+                          <div className="flex items-center gap-3 mt-5">
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground/50 hover:text-foreground transition-colors"
+                            >
+                              <Github size={14} />
+                              GitHub
+                            </a>
+                          </div>
                         )}
 
                         <button
@@ -245,7 +231,7 @@ export default function FeaturedProjects() {
                                     key={i}
                                     className="text-sm text-foreground/60 flex gap-2"
                                   >
-                                    <span className="text-primary-400 shrink-0">
+                                    <span className="text-red-400 shrink-0">
                                       &rsaquo;
                                     </span>
                                     {challenge}
@@ -265,7 +251,7 @@ export default function FeaturedProjects() {
                                     key={i}
                                     className="text-sm text-foreground/60 flex gap-2"
                                   >
-                                    <span className="text-secondary-400 shrink-0">
+                                    <span className="text-green-400 shrink-0">
                                       &rsaquo;
                                     </span>
                                     {solution}

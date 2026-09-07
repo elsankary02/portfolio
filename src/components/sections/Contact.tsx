@@ -88,7 +88,7 @@ export default function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:mohamedibrahimsoftware02@gmail.com"
+                  href="mailto:ahmedibrahim.software@gmail.com"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
                 >
                   <span className="w-10 h-10 rounded-xl bg-overlay/[0.05] flex items-center justify-center group-hover:bg-primary-500/10 transition-colors">
@@ -97,7 +97,7 @@ export default function Contact() {
                   mohamedibrahimsoftware02@gmail.com
                 </a>
                 <a
-                  href="tel:+20 12 04306044"
+                  href="tel:+201204306044"
                   className="flex items-center gap-3 text-sm text-foreground/60 hover:text-primary-400 transition-colors group"
                 >
                   <span className="w-10 h-10 rounded-xl bg-overlay/[0.05] flex items-center justify-center group-hover:bg-primary-500/10 transition-colors">

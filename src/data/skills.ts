@@ -7,16 +7,16 @@ export const skillCategories: SkillCategory[] = [
       { name: "Flutter", level: 5 },
       { name: "Dart", level: 5 },
       { name: "Android Development", level: 3 },
-      { name: "iOS Development", level: 3 },
+      { name: "iOS Development", level: 1 },
       { name: "Responsive UI", level: 5 },
       { name: "Material Design", level: 5 },
-      { name: "Cupertino Widgets", level: 4 },
+      { name: "Cupertino Widgets", level: 2 },
     ],
   },
   {
     title: "State Management & Architecture",
     skills: [
-      { name: "Riverpod", level: 5 },
+      { name: "Riverpod", level: 2 },
       { name: "Bloc", level: 5 },
       { name: "Provider", level: 4 },
       { name: "Clean Architecture", level: 3 },
@@ -54,7 +54,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "SharedPreferences", level: 4 },
       { name: "Hive", level: 3 },
-      { name: "SQLite", level: 3 },
+      { name: "SQLite", level: 1 },
     ],
   },
   {
@@ -81,7 +81,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Responsive and Clean User Interfaces", level: 5 },
       { name: "Material Design Widgets", level: 5 },
-      { name: "Cupertino Widgets", level: 4 },
+      { name: "Cupertino Widgets", level: 2 },
     ],
   },
 ];
