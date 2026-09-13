@@ -17,17 +17,31 @@ import {
 } from "lucide-react";
 import { FormEvent, useState } from "react";
 
+// Prefer an environment variable over hardcoding the key.
+// Add this to your .env.local file:
+// NEXT_PUBLIC_WEB3FORMS_KEY=acb7111c-1540-47a9-a0f6-e28893070555
+const WEB3FORMS_ACCESS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY ??
+  "acb7111c-1540-47a9-a0f6-e28893070555";
+
 export default function Contact() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage(null);
 
-    const formData = new FormData(e.currentTarget);
-    formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY"); // <-- Replace this with your key from web3forms.com
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+
+    // Optional but recommended by Web3Forms: honeypot spam field.
+    // Add <input type="checkbox" name="botcheck" class="hidden" /> to the form
+    // if you want to use this (see form JSX below).
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -39,18 +53,43 @@ export default function Contact() {
         body: JSON.stringify(Object.fromEntries(formData)),
       });
 
-      const data = await response.json();
+      // Log full diagnostics so real failures are easy to spot in DevTools.
+      let data: { success?: boolean; message?: string } = {};
+      try {
+        data = await response.json();
+      } catch {
+        // Response wasn't valid JSON — likely blocked by an extension,
+        // a network/CORS issue, or Web3Forms returned an HTML error page.
+        throw new Error(
+          `Non-JSON response (HTTP ${response.status} ${response.statusText}). ` +
+            `This usually means the request was blocked before reaching Web3Forms ` +
+            `(check for ad blockers) or the access key/domain isn't set up correctly.`,
+        );
+      }
 
-      if (data.success) {
+      console.log("Web3Forms status:", response.status, response.statusText);
+      console.log("Web3Forms Response:", data);
+
+      if (response.ok && data.success) {
         setStatus("success");
-        e.currentTarget.reset();
+        form.reset();
         setTimeout(() => setStatus("idle"), 5000);
       } else {
-        throw new Error(data.message || "Failed to send");
+        throw new Error(
+          data.message ??
+            `Failed to send (HTTP ${response.status} ${response.statusText})`,
+        );
       }
-    } catch {
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : "Unknown error occurred";
+      console.error("Submission error:", message, error);
+      setErrorMessage(message);
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 5000);
+      setTimeout(() => {
+        setStatus("idle");
+        setErrorMessage(null);
+      }, 5000);
     }
   };
 
@@ -215,6 +254,17 @@ export default function Contact() {
                     className="w-full px-4 py-3 rounded-xl bg-overlay/[0.05] border border-overlay/[0.1] text-foreground placeholder-foreground/20 text-sm focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all resize-none"
                   />
                 </div>
+
+                {/* Honeypot field for spam protection (optional, recommended by Web3Forms) */}
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <Button
                   type="submit"
                   variant="primary"
@@ -242,6 +292,12 @@ export default function Contact() {
                         ? "Failed to Send"
                         : "Send Message"}
                 </Button>
+
+                {status === "error" && errorMessage && (
+                  <p className="text-xs text-red-400/80 text-center pt-1">
+                    {errorMessage}
+                  </p>
+                )}
               </form>
             </motion.div>
           </div>
