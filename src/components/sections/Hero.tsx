@@ -1,9 +1,16 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { ArrowDown, Download, ExternalLink, Mail, Github, Linkedin } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { motion } from "framer-motion";
+import {
+  ArrowDown,
+  Download,
+  ExternalLink,
+  Github,
+  Linkedin,
+  Mail,
+} from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   const containerVariants = {
@@ -25,7 +32,6 @@ export default function Hero() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
-
 
   return (
     <section
@@ -78,7 +84,7 @@ export default function Hero() {
               <Button
                 variant="primary"
                 size="lg"
-                href="/resume/Mohamed%20Ibrahim%20-%20Resume.pdf"
+                href="/resume/mohamed_ibrahim.pdf"
                 download
                 icon={<Download size={18} />}
               >
@@ -87,7 +93,7 @@ export default function Hero() {
               <Button
                 variant="secondary"
                 size="lg"
-                href="/resume/Mohamed%20Ibrahim%20-%20Resume.pdf"
+                href="/resume/mohamed_ibrahim.pdf"
                 target="_blank"
                 icon={<ExternalLink size={18} />}
               >
@@ -101,11 +107,7 @@ export default function Hero() {
               >
                 View Projects
               </Button>
-              <Button
-                variant="ghost"
-                size="lg"
-                href="#contact"
-              >
+              <Button variant="ghost" size="lg" href="#contact">
                 Contact Me
               </Button>
             </motion.div>
