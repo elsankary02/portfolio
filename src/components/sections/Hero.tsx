@@ -84,7 +84,7 @@ export default function Hero() {
               <Button
                 variant="primary"
                 size="lg"
-                href="/resume/Mohamed_Ibrahim.pdf"
+                href="/resume/mohamed_ibrahim.pdf"
                 download
                 icon={<Download size={18} />}
               >
@@ -93,7 +93,7 @@ export default function Hero() {
               <Button
                 variant="secondary"
                 size="lg"
-                href="/resume/Mohamed_Ibrahim.pdf"
+                href="/resume/mohamed_ibrahim.pdf"
                 target="_blank"
                 icon={<ExternalLink size={18} />}
               >
