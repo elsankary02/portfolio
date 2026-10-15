@@ -183,7 +183,7 @@ export default function FeaturedProjects() {
                               <h4 className="text-xs font-semibold tracking-widest uppercase text-foreground/40 mb-2">
                                 My Role
                               </h4>
-                              <p className="text-sm text-foreground/70 leading-relaxed">
+                              <p className="text-sm text-foreground/70 leading-relaxed whitespace-pre-line">
                                 {project.role}
                               </p>
                             </div>

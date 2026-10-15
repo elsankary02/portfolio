@@ -7,7 +7,7 @@ export const projects: Project[] = [
     subtitle: "Social Trading Platform",
     overview:
       "A social trading app connecting traders and investors through live trading challenges, market updates, educational sessions, and social interaction features.",
-    role: "Junior Flutter Developer — Built UI screens in Flutter for a social trading app connecting traders and investors.",
+    role: "• Contributed to the Flutter UI of a social trading app connecting traders and investors.\n• Helped refine and finalize screens for live trading challenges, market updates, and educational sessions.",
     challenges: [
       "Real-time market data synchronization with sub-second latency requirements",
       "Complex financial chart rendering with large datasets",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     subtitle: "Boat Maintenance & Service Management Platform",
     overview:
       "A marine service app that lets boat owners manage boats, request maintenance services, schedule repairs, and track service progress.",
-    role: "Junior Flutter Developer — Built UI screens in Flutter for a marine service app supporting boat management and maintenance requests.",
+    role: "• Developed the Profile section of a Flutter mobile application for boat maintenance services.\n• Implemented profile editing, language selection, light and dark themes, and legal and support pages.\n• Developed account-related actions and UI components to support the application's user experience.\n• Contributed to a production application published on the Apple App Store and Google Play.",
     challenges: [
       "Extremely limited internet connectivity at sea requiring robust offline support",
       "Complex fleet management with multiple vessel types and crew roles",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     subtitle: "Women-Only Ride Sharing Platform",
     overview:
       "A women-only ride-sharing app connecting passengers and drivers through a smooth, accessible, and safety-focused mobile experience.",
-    role: "Junior Flutter Developer — Built UI screens for booking, driver offers, pickup and drop-off maps, live trip tracking, and safety actions.",
+    role: "• Contributed to the Flutter UI of a women-only ride-sharing app connecting passengers and drivers.\n• Helped refine and finalize booking, map, and live trip tracking screens.",
     challenges: [
       "Designing a ride-sharing experience that clearly supports both passenger and driver journeys",
       "Building secure trip booking, driver selection, and ride confirmation flows",

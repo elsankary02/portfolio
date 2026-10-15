@@ -2,20 +2,28 @@ import { Experience } from "@/types";
 
 export const experiences: Experience[] = [
   {
-    id: "freelance",
-    company: "Freelance",
-    role: "Junior Flutter Developer",
-    period: "December 2024 – Present",
-    location: "Cairo, Egypt",
+    id: "mawdooey",
+    company: "Mawdooey (Freelance)",
+    role: "Flutter Developer",
+    period: "September 2026 – October 2026",
+    location: "Remote",
     achievements: [
-      "Developed end-to-end Flutter mobile applications for clients, mainly in e-commerce and service-based apps.",
-      "Built complete user flows including authentication, product listing, cart/order management, and profile systems.",
-      "Integrated REST APIs using Dio and handled JSON serialization.",
-      "Implemented state management using Riverpod and Bloc for scalable architecture.",
-      "Designed responsive UI using Flutter widgets following Material Design principles.",
-      "Published applications to Google Play Store and App Store.",
-      "Worked directly with clients to gather requirements, estimate tasks, and deliver features on time.",
-      "Fixed bugs, improved performance, and maintained existing applications after release.",
+      "Contributed to the development and enhancement of an existing Flutter application published on the Apple App Store and Google Play.",
+      "Refined the user interface, integrated visual assets, and developed an animated dialog to improve the app experience.",
+      "Worked within the existing codebase while maintaining consistency with the application's design and structure.",
+    ],
+  },
+  {
+    id: "al-rubban-marine",
+    company: "Al Rubban Marine (Freelance)",
+    role: "Flutter Developer",
+    period: "November 2025 – February 2026",
+    location: "Remote",
+    achievements: [
+      "Developed the profile section of a Flutter application for boat maintenance services.",
+      "Implemented profile editing, language selection, light and dark themes, and legal and support pages.",
+      "Built account-related actions and UI components to support a cohesive user experience.",
+      "Contributed to a production application published on the Apple App Store and Google Play.",
     ],
   },
 ];
